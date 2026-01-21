@@ -1,33 +1,12 @@
-This folder contains the SQL files used for the EventSystem database.
-The scripts are written as part of a school project and are used to create the database, add data and practice SQL queries.
+Reflection,
+Why I chose these entities,
+I chose the entities Event, Venue, Participant, Ticket and Payment because they cover the main parts of an event system. An event needs a venue, participants can book tickets, and payments are linked to participants. This structure makes the system clear and easy to understand.
 
-Execution order,
-Run the files in the following order using SQL Server Management Studio (SSMS):
+Normalization,
+The database is normalized by separating data into different tables. For example, venue information is stored only once in the Venue table and referenced from Event. This reduces duplicated data and makes updates easier.
 
-01_CreateDatabase.sql
-Creates the EventSystem database.
+Data constraints,
+Primary keys are used in all tables to uniquely identify records. Foreign keys are used to connect related tables and ensure data integrity. The Email field in Participant is unique to prevent duplicate users.
 
-02_CreateTables.sql
-Creates all tables with primary keys and foreign keys.
-
-03_SeedData.sql
-Inserts sample data into the tables.
-
-04_CRUD_Insert.sql
-Examples of INSERT queries.
-
-05_CRUD_Select.sql
-Examples of SELECT queries.
-
-06_CRUD_Update.sql
-Examples of UPDATE queries.
-
-07_CRUD_Delete.sql
-Examples of DELETE queries.
-
-08_Joins_Queries.sql
-JOIN queries, aggregations, subqueries and business-related questions.
-
-All scripts are written for SQL Server.,
-The database name used is EventSystem.,
-The scripts are intended to be run manually in SSMS.
+Improvements,
+Next step would be to add more validation, for example checking ticket availability and improving payment handling. I would also add indexes to improve performance.
